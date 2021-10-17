@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './Mybutton.module.css'
-export default function Mybutton({children, onClick, ...props}) {
+export default function Mybutton({children, style, onClick, ...props}) {
     return (
-        <button onClick={onClick} className={classes.myBtn}>
+        <button style={style} onClick={onClick} className={classes.myBtn}>
             {children}
         </button>
     )
