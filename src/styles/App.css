@@ -40,6 +40,10 @@
     transition: all 500ms ease-in;
 }
 
+.post_btns{
+    display: flex;
+}
+
 .page__wrapper{
     margin-top: 30px;
     display: flex;

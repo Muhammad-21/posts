@@ -1,7 +1,7 @@
 import React from 'react'
-import {Switch,Route} from "react-router-dom";
+import {Switch,Route,Redirect} from "react-router-dom";
 import About from "../pages/About";
-import Error from "../pages/Error";
+import PostIdPages from '../pages/PostIdPages';
 import Posts from "../pages/Posts";
 export default function AppRouter() {
     return (
@@ -9,12 +9,13 @@ export default function AppRouter() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/posts">
+          <Route exact path="/posts">
             <Posts/>
           </Route>
-          <Route path="/error">
-            <Error/>
+          <Route exact path="/posts/:id">
+            <PostIdPages/>
           </Route>
+          <Redirect to="/posts"/>
         </Switch>
     )
 }
